@@ -1,5 +1,5 @@
 $(function() {
-	// randomSong();
+	startButton();
 });
 
 var songIds = ["995535015", "966411602", "823593456", "956689796", "943946671",
@@ -9,6 +9,11 @@ var songIds = ["995535015", "966411602", "823593456", "956689796", "943946671",
                "76532142", "192688540", "684811768", "344799464", "217633921",
                "192811017", "640047583", "517438248" ];
 
+function startButton(){
+	$("#startGame").on("click", function(){
+		randomSong();
+	});
+}
 
 var object;
 function randomSong(){
@@ -20,7 +25,7 @@ function randomSong(){
 		$("#audioContainer").empty();
 		object = data;
 		console.log(object);
-		$('<audio id="audio_preview" src='+object.results[0].previewUrl+' autoplay </audio>');
+		$("#audioContainer").append($('<audio id="audio_preview" src='+object.results[0].previewUrl+' autoplay </audio>'));
 	});
 }
 
