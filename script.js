@@ -1,4 +1,5 @@
 $(function() {
+	$("#nextButton").hide();
 	startButton();
 	submitButton();
 	submitForm();
@@ -65,9 +66,15 @@ function checkAnswer(){
 	}
 }
 
+var $nextButton;
+
 function startButton(){
 	$("#startGame").on("click", function(){
 		randomSong();
+		$nextButton = $("#nextButton");
+		if ($nextButton.attr("style") === "display: none;") {
+			$nextButton.show();
+		}
 	});
 }
 

@@ -32,6 +32,8 @@
 					<div><strong>3. Do you hear the song? Recognize it? Prove it!</strong></div>
 					<div>4. Submit your guess in the input below, and</div>
 					<div class="lineIndent">check the scoreboard to see your score!</div>
+          <div>5. Click the "Next Song" button to proceed to next song.</div>
+          <div>6. Enjoy! :)</div>
 					<button type="button" class="btn btn-primary" id="startGame">Let's get started!</button>
 				</div>
 
@@ -58,17 +60,44 @@
 				</div>
 			</div>
 			<div class="col-md-3">
-				<h2 id="scoreboard"><strong>Scoreboard:</strong></h2>
-				<div id="scores">
-					<div>Correct: <span id="correct">0</span></div>
-					<div>Incorrect: <span id="incorrect">0</span></div>
-				</div>
+        <div id="rightPanel">
+          <h2 id="scoreboard"><strong>Scoreboard:</strong></h2>
+          <div id="scores">
+            <div>Correct: <span id="correct">0</span></div>
+            <div>Incorrect: <span id="incorrect">0</span></div>
+          </div>
+          <hr>
+          <form action="javascript:void(0)">
+            <label for="name">Name:</label>
+            <input type="text" class="horizontal-form" id="name">
+            <button type="button" class="btn btn-primary btn-sm" id="lbSubmit">Submit</button>
+          </form>
+          <h2 id="leaderboard"><strong>Leaderboard:</strong></h2>
+          <div id="standings">
+            <div>
+              <span id="competitorName">Name</span><span id="scoreNum">Score</span>
+            </div>
+            <div id="1">1. <span class="compName">Eugene</span><span class="compScore">10</span></div>
+            <div id="2">2. <span class="compName"></span "compScore"></div>
+            <div id="3">3. <span class="compName"></span "compScore"></div>
+            <div id="4">4. <span class="compName"></span "compScore"></div>
+            <div id="5">5. <span class="compName"></span "compScore"></div>
+            <div id="6">6. <span class="compName"></span "compScore"></div>
+            <div id="7">7. <span class="compName"></span "compScore"></div>
+            <div id="8">8. <span class="compName"></span "compScore"></div>
+            <div id="9">9. <span class="compName"></span "compScore"></div>
+            <div id="10">10. <span class="compName"></span "compScore"></div>
+          </div>
+        </div>
+				
 				<div id="audioContainer">
-
+				
 				</div>
+				
 			</div>
 		</div>
 	</div>
+
 
 </body>
 </html>
