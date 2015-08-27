@@ -18,7 +18,7 @@
 #background {
 	margin-left: -20px;
 	width: 1285px;
-	height: 595px;
+	height: 597px;
 	opacity: 0.65;
 }
 
@@ -59,22 +59,50 @@
 
 /*answer display*/
 
-#artistAndSongName {
+#artistName {
 	font-family: Abel;
-	font-size: 300%;
+	font-size: 290%;
+	width: 430px;
 	color: white;
 	position: absolute;
-	bottom: 510px;
+	bottom: 60px;
 	left: 0px;
+	text-align: center;
+}
+
+#songName {
+	font-family: Abel;
+	font-size: 290%;
+	width: 430px;
+	color: white;
+	position: absolute;
+	bottom: 20px;
+	left: 0px;
+	text-align: center;
 }
 
 #coverArt {
 	height: 380px;
 	position: absolute;
-	bottom: 117px;
+	bottom: 123px;
 	left: 20px;
 	border: 2px solid black;
 	border-radius: 100px;
+}
+
+/*scoreboard*/
+
+#scoreboard {
+	position: absolute;
+	bottom: 510px;
+	color: white;
+}
+
+#scores {
+	font-size: 140%;
+	color: white;
+	position: absolute;
+	bottom: 450px;
 }
 
 
