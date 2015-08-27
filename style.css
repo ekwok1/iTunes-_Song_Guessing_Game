@@ -1,4 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Handlee);
+@import url(http://fonts.googleapis.com/css?family=Abel);
 
 /*backbone*/
 
@@ -54,6 +55,26 @@
 #guess {
 	width: 250px;
 	margin-bottom: 25px;
+}
+
+/*answer display*/
+
+#artistAndSongName {
+	font-family: Abel;
+	font-size: 300%;
+	color: white;
+	position: absolute;
+	bottom: 510px;
+	left: 0px;
+}
+
+#coverArt {
+	height: 380px;
+	position: absolute;
+	bottom: 117px;
+	left: 20px;
+	border: 2px solid black;
+	border-radius: 100px;
 }
 
 
