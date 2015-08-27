@@ -22,27 +22,35 @@
 		</div>
 
 		<img src="images/itunes.jpg" id="background">
+	</div>
 
+	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-4" id="form">
 				<div id="description">
 					<h2><strong>Instructions:</strong></h2>
 					<div>1. Turn up the volume on your computer!</div>
 					<div class="lineIndent">Or you could just plug in earphones. :)</div>
-					<div>2. Click the "start" button below to begin.</div>
+					<div>2. Click the "Let's get started!" button below to begin.</div>
 					<div><strong>3. Do you hear the song? Recognize it? Prove it!</strong></div>
 					<div>4. Submit your guess in the input below, and</div>
 					<div class="lineIndent">check the scoreboard to see your score!</div>
+					<button type="button" class="btn btn-primary" id="startGame">Let's get started!</button>
 				</div>
+
+				<hr id="line">
+
 				<form action="javascript:void(0)">
 					<div class="form-group">
-					   <label for="guess">Guess:</label>
-					   <input type="text" class="form-control" id="guess">
-					  </div>
+						<label for="guess"><h3><strong>What do you think?</strong></h3></label>
+						<div id="guessText">(You can guess the song name or artist name!)</div>
+						<input type="text" class="form-control" id="guess">
+						<button type="button" class="btn btn-primary" id="submit">Tell me if I'm right!</button>
+					</div>
 				</form>
 			</div>
 		</div>
-
 	</div>
+
 </body>
 </html>
