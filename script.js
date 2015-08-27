@@ -2,6 +2,7 @@ $(function() {
 	startButton();
 	submitButton();
 	submitForm();
+	nextButton();
 });
 
 var songIds = ["995535015", "966411602", "823593456", "956689796", "943946671",
@@ -9,7 +10,20 @@ var songIds = ["995535015", "966411602", "823593456", "956689796", "943946671",
                "250038575", "878000348",  "794095205",  "1645339",  "400835962",
                "325618", "169003415",  "51958108",
                "76532142", "192688540", "684811768", "344799464", "217633921",
-               "192811017", "640047583", "517438248" ];
+               "192811017", "640047583", "517438248"];
+
+function nextButton(){
+	$("#nextButton").on("click", function(){
+		nextSong();
+		$artistName.html("");
+		$songName.html("");
+		$(".coverArt").empty();
+	});
+}
+
+function nextSong(){
+	randomSong();
+}
 
 function submitButton(){
 	$("#submitButton").on("click", function(){
@@ -26,23 +40,27 @@ function submitForm(){
 var correct = 0;
 var incorrect = 0;
 
+var $artistName;
+var $songName;
+var $coverArt;
+
 function checkAnswer(){
 	var $formValue = $("#guess").val();
 	var $object = object.results[0];
 
-	var $artistName = $("#artistName");
-	var $songName = $("#songName");
-	var $coverArt = $("#coverArt");
+	$artistName = $("#artistName");
+	$songName = $("#songName");
+	$coverArt = $(".coverArt");
 
 	$artistName.html($object.artistName);
 	$songName.html($object.trackName.split(" (")[0]);
-	$coverArt.attr("src", $object.artworkUrl100);
+	$coverArt.html('<img src='+$object.artworkUrl100+' id="coverArt">');
 
 	if ($formValue === object.results[0].trackName) {
 		correct++;
 		$("#correct").html(correct);
 	} else {
-		incorrect++
+		incorrect++;
 		$("#incorrect").html(incorrect);
 	}
 }
