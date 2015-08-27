@@ -6,4 +6,16 @@ $(function() {
                  "325618", "169003415",  "51958108",
                  "76532142", "192688540", "684811768", "344799464", "217633921",
                  "192811017", "640047583", "517438248" ];
+
+  testAjax();
 });
+
+function testAjax(){
+	$.ajax({
+   	url: "https://itunes.apple.com/lookup?id=995535015",
+   	jsonp: "callback",
+   	dataType: "jsonp"
+	}).done(function(data) {
+  	console.log(data);
+	});
+}
