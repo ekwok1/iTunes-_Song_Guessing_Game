@@ -61,33 +61,30 @@
 
 #artistName {
 	font-family: Abel;
-	font-size: 290%;
+	font-size: 250%;
 	width: 430px;
 	color: white;
 	position: absolute;
 	bottom: 60px;
 	left: 0px;
-	text-align: center;
 }
 
 #songName {
 	font-family: Abel;
-	font-size: 290%;
+	font-size: 250%;
 	width: 430px;
 	color: white;
 	position: absolute;
 	bottom: 20px;
 	left: 0px;
-	text-align: center;
 }
 
 #coverArt {
-	height: 380px;
+	height: 300px;
 	position: absolute;
-	bottom: 123px;
-	left: 20px;
+	bottom: 160px;
+	left: 60px;
 	border: 2px solid black;
-	border-radius: 100px;
 }
 
 /*scoreboard*/

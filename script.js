@@ -23,8 +23,28 @@ function submitForm(){
 	});
 }
 
+var correct = 0;
+var incorrect = 0;
+
 function checkAnswer(){
-	console.log("clicked!");
+	var $formValue = $("#guess").val();
+	var $object = object.results[0];
+
+	var $artistName = $("#artistName");
+	var $songName = $("#songName");
+	var $coverArt = $("#coverArt");
+
+	$artistName.html($object.artistName);
+	$songName.html($object.trackName.split(" (")[0]);
+	$coverArt.attr("src", $object.artworkUrl100);
+
+	if ($formValue === object.results[0].trackName) {
+		correct++;
+		$("#correct").html(correct);
+	} else {
+		incorrect++
+		$("#incorrect").html(incorrect);
+	}
 }
 
 function startButton(){
@@ -48,7 +68,6 @@ function randomSong(){
 }
 
 function randomNum(){
-	console.log(_.random(songIds.length-1));
 	return _.random(songIds.length-1);
 }
 
