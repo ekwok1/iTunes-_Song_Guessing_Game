@@ -1,5 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Handlee);
 
+/*backbone*/
+
 .gameContainer {
 	width: 1280px;
 }
@@ -19,11 +21,28 @@
 	opacity: 0.65;
 }
 
-#form {
-	position: absolute;
-	top: 120px;
+/*instructions and form*/
+#description {
+	margin-bottom: 30px;
 }
 
-#test {
+.lineIndent {
+	margin-left: 16px;
+}
+
+#form {
+	position: absolute;
+	top: 100px;
+	left: 10px;
 	color: white;
 }
+
+#guess {
+	width: 250px;
+}
+
+
+
+
+
+
