@@ -11,3 +11,19 @@
 	background-color: black;
 	color: white;
 }
+
+#background {
+	margin-left: -20px;
+	width: 1285px;
+	height: 595px;
+	opacity: 0.65;
+}
+
+#form {
+	position: absolute;
+	top: 120px;
+}
+
+#test {
+	color: white;
+}
