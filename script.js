@@ -28,13 +28,17 @@ function nextSong(){
 
 function submitButton(){
 	$("#submitButton").on("click", function(){
+		$("audio")[0].pause();
 		checkAnswer();
+		$("#guess").val("");
 	});
 }
 
 function submitForm(){
 	$("#submitForm").on("submit", function(){
+		$("audio")[0].pause();
 		checkAnswer();
+		$("#guess").val("");
 	});
 }
 
@@ -57,7 +61,7 @@ function checkAnswer(){
 	$songName.html($object.trackName.split(" (")[0]);
 	$coverArt.html('<img src='+$object.artworkUrl100+' id="coverArt">');
 
-	if ($formValue === object.results[0].trackName) {
+	if ($formValue.toLowerCase() === object.results[0].trackName.toLowerCase()) {
 		correct++;
 		$("#correct").html(correct);
 	} else {
@@ -69,7 +73,7 @@ function checkAnswer(){
 var $nextButton;
 
 function startButton(){
-	$("#startGame").on("click", function(){
+	$("#startGame").one("click", function(){
 		randomSong();
 		$nextButton = $("#nextButton");
 		if ($nextButton.attr("style") === "display: none;") {
